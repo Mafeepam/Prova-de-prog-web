@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Realizado</title>
+    <script src="../Script.js"></script>
+</head>
+<body>
+    <h1>Cadastro Realizado com Sucesso!</h1>
+    <p>Ano de Nascimento: <span id="ano-nascimento"></span></p>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Obtém o ano de nascimento do localStorage
+            let anoNascimentoInput = localStorage.getItem("ano-nascimento");
+
+            // Exibe o ano de nascimento se estiver definido no localStorage
+            if (anoNascimentoInput) {
+                document.getElementById("ano-nascimento").textContent = anoNascimentoInput;
+            } else {
+                document.getElementById("ano-nascimento").textContent = "Não especificado";
+            }
+        });
+    </script>
+</body>
+</html>
